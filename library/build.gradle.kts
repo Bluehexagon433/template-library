@@ -25,7 +25,7 @@ var suffixSnapshot = injectVariable["SUFFIX_SNAPSHOT"]
         ?: properties.getValue("suffix_snapshot") as String
 
 android {
-    compileSdkVersion(AppSetting.maxSdk)
+    compileSdkVersion(AppSettings.maxSdk)
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -49,8 +49,8 @@ android {
     })
 
     defaultConfig {
-        minSdkVersion(AppSetting.minSdk)
-        targetSdkVersion(AppSetting.targetSdk)
+        minSdkVersion(AppSettings.minSdk)
+        targetSdkVersion(AppSettings.targetSdk)
         versionCode = buildVersionCode()
         println("VersionCode:  $versionCode")
         versionName = libraryVersion
