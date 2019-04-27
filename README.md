@@ -14,7 +14,6 @@ The release build type has a version like major, minor and minor the debug build
 after the minor and the suffix `-SNAPSHOT`.
 
 ---------------------------------------------------------------------------------------------------------------------
-
 #### Usage
 
 Please follow this steps to setup a new library project base on this template.
@@ -50,8 +49,8 @@ with Android Studio or IntelliJ IDEA
 
 ![](images/folder_image2.png)
 
-- delete the folders `build`
-- delete the files `library.iml` the `library.iml` is only available if you check out the repository
+- delete the folder `build`
+- delete the file `library.iml` the `library.iml` is only available if you check out the repository
 with Android Studio or IntelliJ IDEA
 
 ![](images/folder_image3.png)
@@ -65,3 +64,17 @@ with Android Studio or IntelliJ IDEA
 - open the settings.gradle.kts and replace `":library"` with the name in this example `":myfancy"`
 - open the AndroidManifet.xml and replace the package attribute with your package name to example `de.bluehexagon.myfancy`
 - open the gradle.properties and replace the `library_package_name` with your package name to example `de.bluehexagon.myfancy`
+
+---------------------------------------------------------------------------------------------------------------------
+##### Step three change or remove Jenkinsfile
+
+- if you need a multi pipeline job on jenkins change that Jenkinsfile variable `gitRepo` with the current repository url
+that you use and the `credentialsId` to your jenkins credentials.
+- change the `repoUrl` in the checkout stage to your url
+- find all words `library` and replace it with the name of your library to example `library => myfancy`
+- if you don´t use Jenkins remove the Jenkinsfile
+
+---------------------------------------------------------------------------------------------------------------------
+##### Final Step
+
+- imports the new furnished library with Android Studio and add some cool staff ;-) ......
