@@ -40,7 +40,7 @@ android {
                     val fileName: String = if (output.outputFileName.endsWith("-debug.aar")) {
                         output.outputFileName.replace("-debug", "-${defaultConfig.versionName}.$buildNumber-SNAPSHOT")
                     } else {
-                        output.outputFileName.replace("-release", "-${defaultConfig.versionName}-release")
+                        output.outputFileName.replace("-release", "-${defaultConfig.versionName}")
                     }
                     outputImpl.outputFileName = fileName
                 }
