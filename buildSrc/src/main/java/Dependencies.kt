@@ -28,10 +28,11 @@ object Dependencies {
 
     const val kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.Kotlin.kotlin}"
     const val kotlin_reflection = "org.jetbrains.kotlin:kotlin-reflect:${Versions.Kotlin.kotlin}"
-    const val appcompat_v7 = "com.android.support:appcompat-v7:${Versions.Google.support}"
+    const val appcompat_v7 = "androidx.appcompat:appcompat:${Versions.Google.appcompat_v7}"
 
     //Testing Staff
     const val junit = "junit:junit:${Versions.Testing.junit}"
-    const val test_runner = "com.android.support.test:runner:${Versions.Testing.testRunner}"
-    const val espresso_core = "com.android.support.test.espresso:espresso-core:${Versions.Testing.espressoCore}"
+    const val ext_junit = "androidx.test.ext:junit:${Versions.Testing.extJunit}"
+    const val test_runner = "androidx.test:runner:${Versions.Testing.testRunner}"
+    const val espresso_core = "androidx.test.espresso:espresso-core:${Versions.Testing.espressoCore}"
 }

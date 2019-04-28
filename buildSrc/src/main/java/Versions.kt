@@ -32,13 +32,14 @@ object Versions {
     }
 
     object Google {
-        const val support = "28.0.0"
+        const val appcompat_v7 = "1.0.0"
     }
 
     object Testing {
-        const val testRunner = "1.0.2"
-        const val espressoCore = "3.0.2"
+        const val testRunner = "1.1.0"
+        const val espressoCore = "3.1.0"
         const val junit = "4.12"
+        const val extJunit = "1.1.0"
     }
 
 }

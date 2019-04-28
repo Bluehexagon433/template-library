@@ -56,7 +56,7 @@ android {
         versionName = libraryVersion
         println("VersionName:  $versionName")
         consumerProguardFiles("proguard.txt")
-        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
     }
 
@@ -78,6 +78,7 @@ dependencies {
 
     //Testing Staff
     testImplementation(Dependencies.junit)
+    androidTestImplementation(Dependencies.ext_junit)
     androidTestImplementation(Dependencies.test_runner)
     androidTestImplementation(Dependencies.espresso_core)
 }
@@ -97,10 +98,6 @@ publishing {
                 name.set("Android Template Library")
                 description.set("A Android template library.")
                 url.set("https://github.com/Bluehexagon433/template-library")
-                properties.set(mapOf(
-                        "qa.level" to "basic",
-                        "dev.team" to "core"
-                ))
                 licenses {
                     license {
                         name.set("The Apache License, Version 2.0")
